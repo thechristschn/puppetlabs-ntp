@@ -200,6 +200,7 @@
 #   Default value: 10.am udlc
 #
 class ntp (
+  Array[String] $broadcast,
   Boolean $broadcastclient,
   Stdlib::Absolutepath $config,
   Optional[Stdlib::Absolutepath] $config_dir,
