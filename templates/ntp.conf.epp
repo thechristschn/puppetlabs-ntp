@@ -60,6 +60,11 @@ interface listen <%= $interface %>
 broadcastclient
 <% } -%>
 
+<% $ntp::broadcast.each |$broadcast_ip | {-%>
+broadcast <%= $broadcast_ip %>
+<% } -%>
+
+
 # Set up servers for ntpd with next options:
 # server - IP address or DNS name of upstream NTP server
 # iburst - allow send sync packages faster if upstream unavailable
